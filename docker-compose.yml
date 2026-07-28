@@ -26,19 +26,25 @@ services:
     ports:
       - "1637:1637"
 
-  # 3. Apache Kafka Broker (KRaft Mode) (Internal & External Port: 1909)
+  # 3. Apache Kafka Broker (Official Apache Image - KRaft Mode) (Internal & External Port: 1909)
   kafka:
-    image: bitnami/kafka:3.8.0
+    image: apache/kafka:latest
     container_name: sanab-kafka
     ports:
       - "1909:1909"
     environment:
-      - KAFKA_CFG_NODE_ID=0
-      - KAFKA_CFG_PROCESS_ROLES=controller,broker
-      - KAFKA_CFG_LISTENERS=PLAINTEXT://:1909,CONTROLLER://:1903
-      - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
-      - KAFKA_CFG_CONTROLLER_QUORUM_VOTERS=0@localhost:1903
-      - KAFKA_CFG_CONTROLLER_LISTENER_NAMES=CONTROLLER
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_LISTENERS: PLAINTEXT://:1909,CONTROLLER://:1903
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:1909
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:1903
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_NUM_PARTITIONS: 1
 
   # 4. SANAB Spring Boot Backend Server (Internal & External Port: 1808)
   backend:
