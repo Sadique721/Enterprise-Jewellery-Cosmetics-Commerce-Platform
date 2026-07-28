@@ -43,6 +43,6 @@ USER sanab:sanab
 
 COPY --from=builder /app/sanab-app/target/sanab-app-1.0.0-SNAPSHOT.jar app.jar
 
-EXPOSE 8080
+EXPOSE 1808
 
 ENTRYPOINT ["java", "-jar", "-Dspring.profiles.active=prod", "app.jar"]
