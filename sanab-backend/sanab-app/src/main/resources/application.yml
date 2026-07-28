@@ -112,7 +112,7 @@ sanab:
     transaction-key: ${AUTHORIZE_NET_TRANSACTION_KEY:}
 
 server:
-  port: 8080
+  port: ${SERVER_PORT:1808}
   servlet:
     context-path: /
   shutdown: graceful
