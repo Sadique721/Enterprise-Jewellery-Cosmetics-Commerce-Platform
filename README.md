@@ -1,6 +1,6 @@
 <!-- ========== ANIMATED HEADER BANNER ========== -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:22d3ee,100:8b5cf6&height=200&section=header&text=SANAB%20Enterprise%20Commerce&fontSize=50&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Enterprise%20Jewellery%20%26%20Cosmetics%20Commerce%20Platform%20%7C%20Antigravity%20Technology&descAlignY=60&descAlign=50" width="100%">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=SANAB%20Enterprise%20Commerce&fontSize=45&fontAlignY=38&desc=Enterprise%20Jewellery%20and%20Cosmetics%20Commerce%20Platform&descAlignY=60&descAlign=50" width="100%">
 </p>
 
 <!-- ========== TYPING ANIMATION INTRO ========== -->
@@ -454,7 +454,7 @@ npm run dev
 
 <!-- ========== FOOTER WAVE ANIMATION ========== -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:22d3ee,100:8b5cf6&height=120&section=footer&width=100%">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=120&section=footer&width=100%">
 </p>
 
 <p align="center">
