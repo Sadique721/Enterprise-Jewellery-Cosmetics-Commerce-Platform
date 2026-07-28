@@ -8,61 +8,15 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=500&color=22D3EE&center=true&vCenter=true&width=750&lines=Java+25+LTS+%2F+Spring+Boot+4.1.x;Next.js+16+App+Router+%2F+React+19;PostgreSQL+17+%2B+Redis+8+%2B+Flyway;Spring+Modulith+Modular+Monolith;Enterprise-Grade+Jewellery+%26+Cosmetics+E-Commerce" alt="Typing SVG">
 </p>
 
-<!-- ========== PROFILE VIEWS + FOLLOWERS BADGE ========== -->
+<!-- ========== PROJECT BADGES ========== -->
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Sadique721&label=Profile%20Views&color=22d3ee&style=flat-square" alt="Profile views" />
-  <img src="https://img.shields.io/github/followers/Sadique721?label=Followers&style=social" alt="GitHub followers">
-  <img src="https://img.shields.io/github/stars/Sadique721?label=Stars&style=social" alt="GitHub stars">
   <img src="https://img.shields.io/badge/Architecture-Modular%20Monolith-blueviolet?style=flat-square" alt="Architecture">
   <img src="https://img.shields.io/badge/Security-OWASP%20Top%2010-emerald?style=flat-square" alt="Security">
+  <img src="https://img.shields.io/badge/Backend-Spring%20Boot%204.1.x-brightgreen?style=flat-square" alt="Backend">
+  <img src="https://img.shields.io/badge/Frontend-Next.js%2016-black?style=flat-square" alt="Frontend">
+  <img src="https://img.shields.io/badge/Database-PostgreSQL%2017-blue?style=flat-square" alt="Database">
+  <img src="https://img.shields.io/badge/License-MIT-orange?style=flat-square" alt="License">
 </p>
-
----
-
-<!-- ========== 🔥 ACHIEVEMENT HIGHLIGHT BANNER ========== -->
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:10b981,100:22d3ee&height=80&section=header&text=🏆%20DEVELOPER%20PLACEMENT%20ACHIEVED%20🏆&fontSize=30&fontColor=ffffff&animation=blinking" width="100%">
-</p>
-
-## 🏆 Major Career Achievement – Placement Recognition
-
-> **Recognized by Royal Technosoft Pvt. Limited** for successfully placing **Md Sadique Amin** at **SHREE INFOTECH** as a **Java Developer**.
-
-I am deeply honored to share that my technical skills, consistency, and dedication have been officially recognized by **Royal Technosoft Pvt. Limited** – a leading recruitment and training partner. This achievement marks a significant milestone in my journey as a software engineer.
-
-### 🌟 Key Placement Highlights
-- ✅ **Selected as Java Developer** at **SHREE INFOTECH** – a fast‑growing IT solutions company.
-- ✅ Recognized by **Royal Technosoft Pvt. Limited** with a formal achievement award.
-- ✅ The award citation reads:  
-  > *"Wishing continued success and career growth"* – Royal Technosoft Pvt. Limited
-- ✅ This placement validates my strong foundation in **Java, Spring Boot, and full‑stack enterprise development**.
-
----
-
-### 🎓 Academic & Internship Achievements
-- 🥇 **Top 10%** in Department (CSE) – Consecutive semesters
-- 🏅 **College Merit Scholarship** (2024‑25)
-- 🏆 **Best Project Award** – EntityKart e‑commerce platform at GEC Patan Tech Fest 2025
-- 💻 **Smart India Hackathon 2025 Finalist** – Software edition
-- 📄 **Published Technical Writer** – 5+ articles on Java, Spring Boot (10k+ reads)
-- 🔧 **Open Source Contributor** – 2 merged PRs to a CRUD generator tool
-
----
-
-### 💼 Career Milestone Timeline
-
-```mermaid
-timeline
-    title My Professional Journey
-    section Education
-      2021-2023 : Diploma in CS<br>MANUU Polytechnic<br>87.3%
-      2023-2026 : B.E. Computer Science<br>GEC Patan<br>7.9 CGPA
-    section Internships
-      2022 (Jun-Jul) : Industrial Trainee @ BSNL<br>Telecom & Cyber Security
-      2022-2023 (Sep-Jan) : Web Dev Intern @ TechnoFly<br>Django + React.js
-    section Placement
-      2025 : Selected as Java Developer<br>@ SHREE INFOTECH<br>Recognized by Royal Technosoft
-```
 
 ---
 
@@ -458,96 +412,45 @@ stateDiagram-v2
 
 ---
 
-## 🧠 Tech Stack & Developer Skills
+## 🚀 Getting Started & Local Development
 
-| Category | Technologies & Frameworks |
-| :--- | :--- |
-| **Languages** | Java (25 LTS), Python, JavaScript, TypeScript, SQL, C |
-| **Backend** | Spring Boot 4.1.x, Spring Security, Spring Modulith, Django, REST APIs, Microservices, JWT |
-| **Frontend** | Next.js 16, React 19, HTML5, CSS3, Tailwind CSS v4, Redux Toolkit, Zustand |
-| **Databases** | PostgreSQL 17, Redis 8, MySQL, MongoDB |
-| **AI/ML** | TensorFlow, PyTorch, Scikit-learn, OpenCV, NLTK, LLM Integration |
-| **Data Science** | Pandas, NumPy, Matplotlib, Tableau, Big Data Pipelines |
-| **DevOps & Tools** | Git, GitHub, Docker, AWS (EC2/S3), Kafka, Spark, Maven, Flyway |
+### Prerequisites
+- Java 25 LTS or Java 17+
+- Node.js 20+ & npm / pnpm
+- Docker & Docker Compose
 
-### Badges Showcase
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
+### 1. Clone & Set Environment Variables
+```bash
+git clone https://github.com/Sadique721/Enterprise-Jewellery-Cosmetics-Commerce-Platform.git
+cd Enterprise-Jewellery-Cosmetics-Commerce-Platform
+```
 
----
+Copy `.env.example` to `.env` in `sanab-backend`:
+```bash
+cp sanab-backend/.env.example sanab-backend/.env
+```
 
-## 📊 GitHub Stats & Activity
+### 2. Infrastructure Services (Docker)
+Start PostgreSQL 17, Redis 8, and Kafka:
+```bash
+docker-compose up -d
+```
 
-<p align="center">
-  <img src="https://github-stats-extended.vercel.app/api?username=Sadique721&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0a192f&title_color=22d3ee&icon_color=8b5cf6" alt="GitHub Stats" />
-  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Sadique721&layout=compact&theme=tokyonight&hide_border=true&bg_color=0a192f&title_color=22d3ee" alt="Top Languages" />
-</p>
+### 3. Build & Run Backend (Spring Boot)
+```bash
+cd sanab-backend
+mvn clean compile
+mvn spring-boot:run -pl sanab-app
+```
 
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Sadique721&theme=tokyonight&hide_border=true&background=0a192f&stroke=22d3ee&ring=22d3ee&fire=8b5cf6" alt="GitHub Streak" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Sadique721&theme=tokyo-night&hide_border=true&bg_color=0a192f&color=22d3ee&line=8b5cf6&point=ffffff&area=true" alt="Activity Graph" />
-</p>
-
-<!-- ========== CONTRIBUTION SNAKE ANIMATION ========== -->
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Sadique721/Sadique721/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Sadique721/Sadique721/output/github-contribution-grid-snake.svg">
-    <img alt="github contribution snake animation" src="https://raw.githubusercontent.com/Sadique721/Sadique721/output/github-contribution-grid-snake.svg">
-  </picture>
-</p>
+### 4. Build & Run Frontend (Next.js)
+```bash
+cd sanab-frontend
+npm install
+npm run dev
+```
 
 ---
-
-## 🔥 Featured Projects
-
-| Project | Description | Tech Stack |
-| :--- | :--- | :--- |
-| **[SANAB Platform](https://github.com/Sadique721/Enterprise-Jewellery-Cosmetics-Commerce-Platform)** | Enterprise Jewellery & Cosmetics Commerce Monolith | Java 25, Spring Boot 4.1, Next.js 16, PostgreSQL 17 |
-| **[MSA – Offline AI Agent](https://github.com/Sadique721/AI-Agent-MSA)** | Local AI assistant with voice & Android ADB controls | Python, Vosk, Llama 2, ADB |
-| **[Entitykart](https://github.com/Sadique721/Entitykart)** | Full-featured E-Commerce system | Spring Boot, React, JWT, MySQL |
-| **[Ethical Hacking Portal](https://github.com/Sadique721/ethical-hacking-portal)** | Cybersecurity learning environment | Django, Python, SQLite |
-| **[Recipe Finder Pro](https://github.com/Sadique721/Recipe-finder-pro-)** | Instant recipe search with dark mode UI | React.js, REST APIs |
-
----
-
-## 🏆 GitHub Achievements
-
-<p align="center">
-  <a href="https://github.com/Sadique721?tab=achievements">
-    <img src="https://raw.githubusercontent.com/Schweinepriester/github-profile-achievements/main/images/tiers/pull-shark-silver.png" width="90" alt="Pull Shark Silver" />
-  </a>
-  <a href="https://github.com/Sadique721?tab=achievements">
-    <img src="https://raw.githubusercontent.com/Schweinepriester/github-profile-achievements/main/images/quickdraw-default.png" width="90" alt="Quickdraw" />
-  </a>
-  <a href="https://github.com/Sadique721?tab=achievements">
-    <img src="https://raw.githubusercontent.com/Schweinepriester/github-profile-achievements/main/images/yolo-default.png" width="90" alt="YOLO" />
-  </a>
-  <a href="https://github.com/Sadique721?tab=achievements">
-    <img src="https://raw.githubusercontent.com/Schweinepriester/github-profile-achievements/main/images/pair-extraordinaire-default.png" width="90" alt="Pair Extraordinaire" />
-  </a>
-</p>
-
----
-
-## 📫 Connect & Social Links
-
-<p align="center">
-  <a href="https://www.linkedin.com/in/md-sadique-amin-b6a948198/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  <a href="https://github.com/Sadique721"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
-  <a href="http://www.youtube.com/@mdsadiqueamin721"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" /></a>
-  <a href="mailto:mdsadiqueamin721786@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-</p>
 
 <!-- ========== FOOTER WAVE ANIMATION ========== -->
 <p align="center">
@@ -555,5 +458,5 @@ stateDiagram-v2
 </p>
 
 <p align="center">
-  <i>“Code. Create. Decentralize. Build for Production.”</i>
+  <i>SANAB — Enterprise Jewellery & Cosmetics Commerce Platform | Built with Spring Boot 4 & Next.js 16</i>
 </p>
