@@ -1,0 +1,64 @@
+name: SANAB Frontend Storefront CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - 'sanab-frontend/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'sanab-frontend/**'
+
+jobs:
+  build-and-lint:
+    name: Next.js 15 Build & Typecheck
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: sanab-frontend/package-lock.json
+
+      - name: Install Dependencies
+        run: |
+          cd sanab-frontend
+          npm ci
+
+      - name: Next.js Production Build
+        run: |
+          cd sanab-frontend
+          npm run build
+
+  docker-build-push:
+    name: Build & Push Storefront Docker Image
+    needs: build-and-lint
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build & Push Storefront Image
+        uses: docker/build-push-action@v5
+        with:
+          context: ./sanab-frontend
+          file: ./sanab-frontend/Dockerfile
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository }}/sanab-frontend:latest
+            ghcr.io/${{ github.repository }}/sanab-frontend:${{ github.sha }}

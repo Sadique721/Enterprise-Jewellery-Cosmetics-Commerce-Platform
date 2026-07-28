@@ -1,0 +1,112 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# SANAB Notification Module Configuration
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# ─── Spring Mail (SMTP) ───────────────────────────────────────────────────────
+spring:
+  mail:
+    host: ${MAIL_HOST:smtp.gmail.com}
+    port: ${MAIL_PORT:587}
+    username: ${MAIL_USERNAME:}
+    password: ${MAIL_PASSWORD:}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000
+    default-encoding: UTF-8
+
+  # ─── Redis (Event publication registry caching) ─────────────────────────────
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+      timeout: 2000ms
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 4
+          min-idle: 1
+
+  # ─── Async Processing ───────────────────────────────────────────────────────
+  task:
+    execution:
+      thread-name-prefix: sanab-notif-
+      pool:
+        core-size: 4
+        max-size: 16
+        queue-capacity: 200
+
+  # ─── Scheduling ─────────────────────────────────────────────────────────────
+  task:
+    scheduling:
+      thread-name-prefix: sanab-retry-scheduler-
+      pool:
+        size: 2
+
+# ─── Spring Retry ─────────────────────────────────────────────────────────────
+spring.retry:
+  enabled: true
+
+# ─── SANAB Notification Provider Configuration ────────────────────────────────
+sanab:
+  notification:
+    email:
+      # Options: smtp (default)
+      provider: ${SANAB_EMAIL_PROVIDER:smtp}
+      from: ${SANAB_EMAIL_FROM:noreply@sanab.com}
+      from-name: ${SANAB_EMAIL_FROM_NAME:SANAB Haute Commerce}
+
+    sms:
+      # Options: twilio (default), msg91
+      provider: ${SANAB_SMS_PROVIDER:twilio}
+
+    whatsapp:
+      # Options: twilio (default), meta
+      provider: ${SANAB_WHATSAPP_PROVIDER:twilio}
+
+    # ─── Twilio Configuration (SMS + WhatsApp) ─────────────────────────────
+    twilio:
+      account-sid: ${TWILIO_ACCOUNT_SID:}
+      auth-token: ${TWILIO_AUTH_TOKEN:}
+      sms-from: ${TWILIO_SMS_FROM:}
+      whatsapp-from: ${TWILIO_WHATSAPP_FROM:}
+
+    # ─── MSG91 Configuration (SMS fallback) ────────────────────────────────
+    msg91:
+      api-key: ${MSG91_API_KEY:}
+      sender-id: ${MSG91_SENDER_ID:SANAB}
+
+    # ─── High-value order threshold ────────────────────────────────────────
+    high-value-order-threshold: ${HIGH_VALUE_ORDER_THRESHOLD:50000}
+
+# ─── Spring Modulith Event Configuration ─────────────────────────────────────
+spring:
+  modulith:
+    events:
+      jdbc:
+        # Retain published events for audit/debugging for 30 days
+        schema-initialization:
+          enabled: true
+
+# ─── Thymeleaf ────────────────────────────────────────────────────────────────
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML
+    encoding: UTF-8
+    cache: ${THYMELEAF_CACHE:true}
+
+# ─── Logging ──────────────────────────────────────────────────────────────────
+logging:
+  level:
+    com.antigravity.sanab.notification: INFO
+    org.springframework.mail: WARN
+    com.twilio: WARN

@@ -1,0 +1,118 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# SANAB Enterprise Platform — Root Git Ignore Configuration
+# Antigravity Technology
+# ═══════════════════════════════════════════════════════════════════════════
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 1. Environment & Credentials (CRITICAL - DO NOT COMMIT SECRETS)
+# ─────────────────────────────────────────────────────────────────────────────
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.staging
+.env.prod
+*.env
+!*.env.example
+secrets/
+config/secrets/
+credentials/
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.keystore
+*.jks
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 2. Java / Maven Build Output & Dependencies
+# ─────────────────────────────────────────────────────────────────────────────
+**/target/
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+.mvn/wrapper/maven-wrapper.jar
+maven-wrapper.jar
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 3. Node / Frontend Build Output & Dependencies
+# ─────────────────────────────────────────────────────────────────────────────
+**/node_modules/
+node_modules/
+.next/
+out/
+build/
+dist/
+.turbo/
+.vercel/
+coverage/
+.nyc_output/
+*.tsbuildinfo
+next-env.d.ts
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 4. Logs & Debug Outputs
+# ─────────────────────────────────────────────────────────────────────────────
+*.log
+logs/
+**/logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+lerna-debug.log*
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 5. IDE & Editor Specific
+# ─────────────────────────────────────────────────────────────────────────────
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.swp
+*.swo
+*~
+.netrwhist
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 6. Operating System & System Cache
+# ─────────────────────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 7. Database & Local Storage Files
+# ─────────────────────────────────────────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+*.h2.db
+*.dump
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 8. Temporary & Backup Files
+# ─────────────────────────────────────────────────────────────────────────────
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp

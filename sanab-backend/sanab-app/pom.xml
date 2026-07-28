@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.antigravity.sanab</groupId>
+        <artifactId>sanab-backend</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>sanab-app</artifactId>
+    <name>SANAB :: Application</name>
+    <description>
+        Main Spring Boot application entry point, modular monolith bootstrapper,
+        and unified configuration runner.
+    </description>
+
+    <dependencies>
+        <!-- All Backend Modules -->
+        <dependency>
+            <groupId>com.antigravity.sanab</groupId>
+            <artifactId>sanab-shared</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.antigravity.sanab</groupId>
+            <artifactId>sanab-customer</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.antigravity.sanab</groupId>
+            <artifactId>sanab-catalog</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.antigravity.sanab</groupId>
+            <artifactId>sanab-inventory</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.antigravity.sanab</groupId>
+            <artifactId>sanab-cart</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.antigravity.sanab</groupId>
+            <artifactId>sanab-orders</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.antigravity.sanab</groupId>
+            <artifactId>sanab-payments</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.antigravity.sanab</groupId>
+            <artifactId>sanab-shipping</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.antigravity.sanab</groupId>
+            <artifactId>sanab-promotions</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.antigravity.sanab</groupId>
+            <artifactId>sanab-reviews</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.antigravity.sanab</groupId>
+            <artifactId>sanab-search</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.antigravity.sanab</groupId>
+            <artifactId>sanab-cms</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.antigravity.sanab</groupId>
+            <artifactId>sanab-support</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.antigravity.sanab</groupId>
+            <artifactId>sanab-analytics</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.antigravity.sanab</groupId>
+            <artifactId>sanab-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.antigravity.sanab</groupId>
+            <artifactId>sanab-identity</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.antigravity.sanab</groupId>
+            <artifactId>sanab-notifications</artifactId>
+        </dependency>
+
+        <!-- Spring Boot Starters -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!-- Spring Modulith -->
+        <dependency>
+            <groupId>org.springframework.modulith</groupId>
+            <artifactId>spring-modulith-starter-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.modulith</groupId>
+            <artifactId>spring-modulith-starter-jpa</artifactId>
+        </dependency>
+
+        <!-- Database & Migrations -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-database-postgresql</artifactId>
+        </dependency>
+
+        <!-- DevTools -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- Testing -->
+        <dependency>
+            <groupId>org.springframework.modulith</groupId>
+            <artifactId>spring-modulith-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

@@ -1,0 +1,133 @@
+spring:
+  application:
+    name: ${APP_NAME:SANAB}
+
+  autoconfigure:
+    exclude:
+      - org.springframework.modulith.events.jdbc.JdbcEventPublicationAutoConfiguration
+
+  profiles:
+    active: ${APP_ENV:development}
+
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:sanab_db}?sslmode=${DB_SSL_MODE:prefer}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+      idle-timeout: 300000
+      connection-timeout: 20000
+      max-lifetime: 1200000
+      pool-name: SanabHikariCP
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        show_sql: false
+        jdbc:
+          batch_size: 50
+          order_inserts: true
+          order_updates: true
+
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      username: ${REDIS_USERNAME:}
+      password: ${REDIS_PASSWORD:}
+      timeout: 2000ms
+
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    consumer:
+      group-id: sanab-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+  mail:
+    host: ${SMTP_HOST:smtp.gmail.com}
+    port: ${SMTP_PORT:587}
+    username: ${SMTP_USERNAME:}
+    password: ${SMTP_PASSWORD:}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  flyway:
+    enabled: true
+    schemas: identity,notifications,catalog,orders,payments,customer,cart,shipping,promotions,reviews,search,cms,support,analytics,admin
+    create-schemas: true
+    baseline-on-migrate: true
+    locations: classpath:db/migration
+
+sanab:
+  security:
+    jwt:
+      secret: ${JWT_SECRET:dGhpcy1pcy1hLXRlc3Qtc2VjcmV0LWtleS1mb3ItZGV2ZWxvcG1lbnQtcGxlYXNlLWNoYW5nZS1pbi1wcm9kdWN0aW9uLXNhbmFiLWVudGVycHJpc2U=}
+      refresh-secret: ${JWT_REFRESH_SECRET:YW5vdGhlci10ZXN0LXNlY3JldC1rZXktZm9yLXJlZnJlc2gtdG9rZW5zLXBsZWFzZS1jaGFuZ2UtaW4tcHJvZHVjdGlvbi1zYW5hYg==}
+      access-token-expiration: ${JWT_ACCESS_TOKEN_EXPIRATION:900}
+      refresh-token-expiration: ${JWT_REFRESH_TOKEN_EXPIRATION:2592000}
+      issuer: sanab.antigravity.com
+    rate-limit:
+      per-minute: ${RATE_LIMIT_PER_MINUTE:100}
+
+  cors:
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:3000}
+
+  twilio:
+    account-sid: ${TWILIO_ACCOUNT_SID:}
+    auth-token: ${TWILIO_AUTH_TOKEN:}
+    phone-number: ${TWILIO_PHONE_NUMBER:}
+
+  notification:
+    twilio:
+      account-sid: ${TWILIO_ACCOUNT_SID:}
+      auth-token: ${TWILIO_AUTH_TOKEN:}
+      sms-from: ${TWILIO_SMS_FROM:}
+      whatsapp-from: ${TWILIO_WHATSAPP_FROM:}
+
+  cloudinary:
+    cloud-name: ${CLOUDINARY_CLOUD_NAME:}
+    api-key: ${CLOUDINARY_API_KEY:}
+    api-secret: ${CLOUDINARY_API_SECRET:}
+
+  authorize-net:
+    login-id: ${AUTHORIZE_NET_LOGIN_ID:}
+    transaction-key: ${AUTHORIZE_NET_TRANSACTION_KEY:}
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
+  shutdown: graceful
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ${MANAGEMENT_ENDPOINTS:health,info,metrics,prometheus}
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    root: ${LOG_LEVEL:INFO}
+    com.antigravity.sanab: DEBUG
+    org.springframework.security: INFO

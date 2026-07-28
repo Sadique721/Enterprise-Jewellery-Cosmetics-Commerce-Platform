@@ -1,0 +1,39 @@
+# SANAB Backend — Java/Spring Boot Git Ignore Configuration
+
+# Environment Files & Secrets
+.env
+.env.local
+.env.development
+.env.production
+*.env
+!*.env.example
+secrets/
+*.pem
+*.key
+*.p12
+*.jks
+
+# Maven Build Output
+target/
+**/target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Logs
+*.log
+logs/
+**/logs/
+
+# IDE & Editor Files
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.vscode/
+
+# OS Files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to SANAB Privilege</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0b0c10;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: #e0e0e0;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #12141a;
+            border: 1px solid #d4af37;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        .header {
+            background: linear-gradient(135deg, #1c1f26 0%, #0d0e12 100%);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-family: 'Georgia', serif;
+            letter-spacing: 4px;
+            color: #d4af37;
+            text-transform: uppercase;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #a0a5b5;
+            text-transform: uppercase;
+        }
+        .body-content {
+            padding: 40px 30px;
+            line-height: 1.6;
+        }
+        .greeting {
+            font-size: 20px;
+            color: #ffffff;
+            font-family: 'Georgia', serif;
+            margin-bottom: 20px;
+        }
+        .gold-badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid #d4af37;
+            color: #d4af37;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+        .message-text {
+            color: #cccccc;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+        .cta-button {
+            display: block;
+            width: 220px;
+            margin: 30px auto;
+            padding: 14px 28px;
+            background: #d4af37;
+            color: #0b0c10;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        .benefits-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        .benefits-title {
+            color: #d4af37;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 13px;
+            color: #aaaaaa;
+        }
+        .benefits-list li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .benefits-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: #d4af37;
+        }
+        .footer {
+            background: #0d0e12;
+            padding: 25px 20px;
+            text-align: center;
+            font-size: 11px;
+            color: #666666;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header -->
+        <div class="header">
+            <h1>S A N A B</h1>
+            <p>HAUTE JOAILLERIE & COSMÉTIQUES</p>
+        </div>
+
+        <!-- Content -->
+        <div class="body-content">
+            <span class="gold-badge">Royal Privilege Membership</span>
+            <div class="greeting">Welcome to SANAB, <span th:text="${firstName}">Royal Member</span></div>
+
+            <p class="message-text">
+                We are delighted to welcome you to <strong>SANAB</strong>. Your account has been created successfully, unlocking exclusive access to our bespoke 22K Hallmarked Gold, Certified Solitaire Diamonds, and Luxury 24K Skincare collections.
+            </p>
+
+            <a th:href="${accountLink}" class="cta-button">Access Account Portal</a>
+
+            <div class="benefits-box">
+                <div class="benefits-title">Your Member Privileges</div>
+                <ul class="benefits-list">
+                    <li>Complimentary Insured Express Shipping on orders above ₹25,000</li>
+                    <li>Priority Access to Royal Heritage Limited Collections</li>
+                    <li>Dedicated High-Jewellery & Gemological Consultations</li>
+                    <li>Exclusive 24K Gold Skincare Rewards</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            &copy; 2026 SANAB Enterprise Platform. All rights reserved.<br>
+            Mumbai • Paris • Dubai • New York
+        </div>
+    </div>
+</body>
+</html>
