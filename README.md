@@ -32,6 +32,24 @@
 </tr>
 </table>
 
+<!-- ========== NEW: SYSTEM DIAGRAM SECTION ========== -->
+## 📊 System Architecture & Workflow
+
+```mermaid
+sequenceDiagram
+    participant User as Customer
+    participant Cart as Shopping Cart
+    participant Pay as Stripe Gateway
+    participant Order as Order Manager
+    User->>Cart: Add Luxury Item to Cart
+    User->>Cart: Proceed to Checkout
+    Cart->>Pay: Initialize Secure Payment
+    Pay-->>User: Request Card Auth
+    User->>Pay: Submit Authorized Payment
+    Pay->>Order: Send Success Webhook
+    Order->>User: Dispatch Order Confirmation
+```
+
 ---
 
 <!-- ========== ANIMATED HEADER BANNER ========== -->
