@@ -4,6 +4,12 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=600&amp;size=24&amp;duration=3000&amp;pause=500&amp;color=22D3EE&amp;center=true&amp;vCenter=true&amp;width=700&amp;lines=Enterprise%20E-Commerce;Jewellery%20%26%20Cosmetics%20Store;Secure%20Payment%20Gateway;Advanced%20Search%20%26%20Filters" alt="Typing SVG">
 </p>
 
+<!-- ========== NEW: HIGH QUALITY PROJECT BANNER ========== -->
+<p align="center">
+  <img src="project_banner.svg" width="100%">
+</p>
+
+
 <!-- ========== NEW: AUTHOR & ARCHITECT SECTION ========== -->
 ## 👨‍💻 Author & Architect
 
