@@ -1,3 +1,39 @@
+<!-- ========== NEW: ANIMATED WAVE HEADER ========== -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:22d3ee,100:8b5cf6&height=200&section=header&text=Enterprise-Jewellery-Cosmetics-Commerce-Platform&fontSize=50&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Enterprise%20Jewellery%20%26%20Cosmetics%20Commerce%20Platform&descAlignY=60&descAlign=50" width="100%">
+</p>
+
+<!-- ========== NEW: TYPING ANIMATION INTRO ========== -->
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=500&color=22D3EE&center=true&vCenter=true&width=700&lines=Enterprise E-Commerce;Jewellery %26 Cosmetics Store;Secure Payment Gateway;Advanced Search %26 Filters" alt="Typing SVG">
+</p>
+
+<!-- ========== NEW: AUTHOR & ARCHITECT SECTION ========== -->
+## 👨‍💻 Author & Architect
+
+<table>
+<tr>
+<td align="center" width="160">
+  <a href="https://github.com/Sadique721">
+    <img src="https://avatars.githubusercontent.com/Sadique721" width="110" style="border-radius:50%"><br>
+    <b>Md Sadique Amin</b><br>
+    <sub>Backend Java Developer</sub>
+  </a>
+</td>
+<td>
+
+**Md Sadique Amin** — Backend Java Developer.
+
+- 🔗 GitHub: [@Sadique721](https://github.com/Sadique721)
+- 📧 Email: mdsadiqueamin721786@gmail.com
+- 🏗️ Built: Enterprise BSS-OSS Telecom Suite, Backend Java Developer, IR Interconnect & Roaming
+
+</td>
+</tr>
+</table>
+
+---
+
 <!-- ========== ANIMATED HEADER BANNER ========== -->
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=SANAB%20Enterprise%20Commerce&fontSize=45&fontAlignY=38&desc=Enterprise%20Jewellery%20and%20Cosmetics%20Commerce%20Platform&descAlignY=60&descAlign=50" width="100%">
@@ -459,4 +495,10 @@ npm run dev
 
 <p align="center">
   <i>SANAB — Enterprise Jewellery & Cosmetics Commerce Platform | Built with Spring Boot 4 & Next.js 16</i>
+</p>
+
+
+<!-- ========== NEW: FOOTER WAVE ANIMATION ========== -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:22d3ee,100:8b5cf6&height=120&section=footer&width=100%">
 </p>
